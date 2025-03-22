@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<style>
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('images/bg2.jpg') no-repeat center center/cover; /* Set background image */
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    background: rgba(0.1, 0.1, 0.1, 0.3); /* Slightly transparent for better visibility */
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: white; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Gallery Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; /* More spacing */
+    padding: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Photo Styling */
+.photo {
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, filter 0.3s ease-in-out;
+    position: relative;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: filter 0.3s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Hover Effect */
+.photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 5);
+}
+
+.photo:hover img {
+    filter: brightness(1.2);
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    background: #ff9900;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #ff6600;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(0.1, 0.1, 0.1, 0.3);
+}
+</style>
+<body>
+    <header>
+        <h1>MY PHOTOGRAPHY PORTFOLIO</h1>
+    </header>
+
+    <section class="gallery">
+        <div class="photo">
+            <img src="images\nature.jpg" alt="Nature">
+            <a href="nature.html" class="btn">Explore Nature</a>
+        </div>
+        <div class="photo">
+            <img src="images/City.jpeg" alt="City">
+            <a href="city.html" class="btn">Explore City</a>
+        </div>
+        <div class="photo">
+            <img src="images/landscape.jpg" alt="Landscape">
+            <a href="landscape.html" class="btn">Explore Landscape</a>
+        </div>
+        <div class="photo">
+            <img src="images/ocean.webp" alt="Ocean">
+            <a href="ocean.html" class="btn">Explore Ocean</a>
+        </div>
+        <div class="photo">
+            <img src="images/mountain.jpeg" alt="Mountain">
+            <a href="mountain.html" class="btn">Explore Mountain</a>
+        </div>
+        <div class="photo">
+            <img src="images/forest.jpg" alt="Forest">
+            <a href="forest.html" class="btn">Explore Forest</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Photography. All rights reserved.</p>
+    </footer>
+</body>
+</html>
